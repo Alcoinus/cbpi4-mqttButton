@@ -12,7 +12,7 @@ setup(name='cbpi4-mqttButton',
       description='CraftBeerPi Plugin to add an MQTT Button',
       author='Felix Theiß',
       author_email='felix.theiss@outlook.com',
-      url='',
+      url='https://github.com/Alcoinus/cbpi4-mqttButton',
       include_package_data=True,
       package_data={
         # If any package contains *.txt or *.rst files, include them:
