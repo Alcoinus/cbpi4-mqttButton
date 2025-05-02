@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 
 setup(name='cbpi4-mqttButton',
-      version='0.0.1',
+      version='0.0.2',
       description='CraftBeerPi Plugin to add an MQTT Button',
       author='Felix Theiß',
       author_email='felix.theiss@outlook.com',

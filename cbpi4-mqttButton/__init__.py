@@ -4,8 +4,6 @@ import asyncio
 from cbpi.api import *
 
 
-logger = logging.getLogger(__name__)
-
 @parameters(
     [
         Property.Text(label="Topic", configurable=True,
@@ -23,7 +21,6 @@ class MQTTButton(CBPiActor):
     async def on_start(self):
         self.topic = self.props.get("Topic", None)
         self.payload = self.props.get("Payload", "PRESSED")
-        self.state = False
 
     async def on(self, power=None):
         await self.cbpi.satellite.publish(
