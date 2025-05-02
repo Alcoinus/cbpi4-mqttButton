@@ -11,7 +11,7 @@ from cbpi.api import *
         Property.Text(
             label="Payload",
             configurable=True,
-            description="Payload that is sent as MQTT message. Defaults to \"PRESSED\""
+            description="Payload that is sent as MQTT message. Defaults to \"PRESS\""
         )
     ])
 class MQTTButton(CBPiActor):
@@ -20,7 +20,7 @@ class MQTTButton(CBPiActor):
 
     async def on_start(self):
         self.topic = self.props.get("Topic", None)
-        self.payload = self.props.get("Payload", "PRESSED")
+        self.payload = self.props.get("Payload", "PRESS")
 
     async def on(self, power=None):
         await self.cbpi.satellite.publish(
